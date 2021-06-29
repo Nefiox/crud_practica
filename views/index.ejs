@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2>Platillos disponibles</h2>
+
+    <ul>
+      <% for( let meal of meals) {%> 
+        <li><a href="/detail/<%= meal.id %> "> <%= meal.name %></a></li>
+      <% } %> 
+    </ul>
+    <a href="/agregar"> Agregar Platillo </a>
+  </body>
+</html>
